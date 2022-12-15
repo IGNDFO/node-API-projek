@@ -51,7 +51,7 @@ try{
     }
 })
 
-router.put('/:calon_mahasiswaId', async(req,res)=>{
+router.put('/:Calon_mahasiswaId', async(req,res)=>{
     const data={
         email: req.body.email,
         nama: req.body.nama,

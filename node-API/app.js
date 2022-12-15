@@ -4,6 +4,7 @@ const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv/config')
+const cors = require('cors')
 
 // (6) middleware body-parser
 // https://stackoverflow.com/questions/24330014/bodyparser-is-deprecated-express-4
@@ -11,6 +12,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+app.use(cors());
 
 // (7) import routes
 const mahasiswaRoutes = require('./routes/calon_mahasiswa')
